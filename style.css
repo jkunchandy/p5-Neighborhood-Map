@@ -1,0 +1,41 @@
+        html { height: 100% }
+        body { height: 100%; margin: 0px; padding: 0px }
+        #map_canvas{    height: 100%;
+                        margin-left:400px;
+        }
+        #side_panel{
+                        position:absolute;
+                        width:380px;
+                        height: 100%;
+                        overflow:auto;
+                        float:left;
+                        padding-left:10px;
+                        padding-right:10px;
+        }
+        #ListBox{       overflow:auto;
+                        width:300px; max-width:300px;
+                        height:300px; max-height:300px;
+                        display: inline-block;
+                        border: 3px solid black;
+                        padding-top: 3px;
+                        margin-top: 8px;
+        }
+        #SearchBox{
+                        width:300px;
+        }
+
+        ul{             border: 1px solid black;
+                        list-style-type: none;
+        }
+/*
+    li  {   border: 1px solid black;
+        }
+*/
+
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+        }
