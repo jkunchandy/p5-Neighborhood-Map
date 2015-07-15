@@ -62,10 +62,12 @@
                         border: 1px solid black;
                         padding-top: 3px;
                         margin-top: 8px;
+
         }
         #SearchBox{
                     /*    width:300px; */
                         width: 100%;
+
         }
 
         ul{             border: 1px solid black;
