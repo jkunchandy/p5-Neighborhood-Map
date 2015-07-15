@@ -85,3 +85,11 @@
         td {
             padding: 5px;
         }
+
+        .online {
+            color: green;
+        }
+
+        .offline {
+            color: red;
+        }

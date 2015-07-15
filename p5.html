@@ -264,6 +264,8 @@
         //trace function for debugging
         function trace(message)
         {
+            // turn trace off by just returning
+            return;
             if (typeof console != 'undefined')
             {
                 console.log(message);
@@ -369,7 +371,11 @@
             yelp.getYelp('cafe');
         }
     </script>
+
+
 </head>
+
+
 
 <!-- Code below only gets called when initialize() has completed. -->
 <body onload="initialize()">
@@ -381,6 +387,8 @@
             <!-- side panel div container -->
      <!--       <div id="side_panel">  -->
                 <h1>Cafe's in Santa Monica, CA</h1>
+
+                <h6> You are <strong id="online-status" class="online"> ..Connecting </strong> </h6>
 
                 <p><input id="SearchBox" placeholder="Search" data-bind="textInput: searchStr" /></p>
 
@@ -403,6 +411,31 @@
     </div>
 </div>
 
+
+
+       <script type="text/javascript">
+
+                            (function () {
+
+                        // Navigator.onLine does not show a line as down when the connection
+                        // is already down prior to running app. Only picks up state change
+                        // when app is active
+
+                        var displayOnlineStatus = document.getElementById("online-status");
+
+                        setInterval(function () {
+                          if (navigator.onLine) {
+                            displayOnlineStatus.innerHTML = 'Online';
+                            displayOnlineStatus.className = "online";
+                          }
+                          else {
+                            displayOnlineStatus.innerHTML = 'Offline';
+                            displayOnlineStatus.className = "offline";
+                          }
+                        }, 2000);
+
+                    })();
+    </script>
 
 </body>
 
