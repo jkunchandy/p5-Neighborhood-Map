@@ -180,10 +180,17 @@
                     });
 
                     // enable visibility of marker on map
-                        yelpMrkrs[i].visible = true;
+                    yelpMrkrs[i].visible = true;
 
                     //add an onclick event..make marker bounce after click
                     google.maps.event.addListener(yelpMrkrs[i], 'click', function() {
+                        // stop bouncing of all other markers
+                        var totalMrkrs = yelpMrkrs.length;
+                        var mrkrNum;
+                        for (mrkrNum = 0; mrkrNum < totalMrkrs; mrkrNum++) {
+                              yelpMrkrs[mrkrNum].setAnimation(null);
+                            };
+                        // setup clicked marker to bounce and present info
                         yelpMrkrs[i].setAnimation(google.maps.Animation.BOUNCE);
                         infowindow.setContent(infowindowcontent);
                         infowindow.open(map,yelpMrkrs[i]);
