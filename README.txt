@@ -7,7 +7,7 @@ Description:
 	The user can scroll thru the listbar to view all the cafes that have an icon on the map.
 
 The files that make up this app:
-	p5.html,
+	index.html,
 	css/style.css,
 	README.txt,
 	http://maps.google.com/maps/api/js?sensor=false,
@@ -15,7 +15,7 @@ The files that make up this app:
     knockout-3.2.0.min.js
 
 To run this app:
-	In the browser window type - p5.html
+	In the browser window type - index.html
 
 To exit this app:
 	Close the browser page

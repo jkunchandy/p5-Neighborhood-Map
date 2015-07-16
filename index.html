@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-
+ <head>
+    <title>Project 5 - Neighborhood Map</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap.min.css">
@@ -133,7 +133,7 @@
                     obj.address1= item.address1 + item.address2 + item.address3;
                     obj.address2= item.city + ", " + item.state + ", " + item.zip;
                     // open or closed right now?
-                    if (item.is_closed == true) {
+                    if (item.is_closed === true) {
                         obj.status= "Closed";
                     } else {
                         obj.status= "Open";
@@ -201,9 +201,9 @@
                         yelpMrkrs[i].setAnimation(null);
                     });
 
-                },
+                }
 
-        }
+        };
     </script>
 
 
@@ -249,7 +249,7 @@
         initLocationBox = function() {
             var txt = document.createTextNode(searchLoc.city + " " + searchLoc.state + " " + searchLoc.country);
             $( "#CurrentLocation" ).append(txt);
-        }
+        };
 
         // Initialize the List box
         // using DOM to add a new div instead of jQuery
@@ -313,7 +313,7 @@
                     break;
             }
 
-        }
+        };
 
 
         //Function that gets run when the document loads
@@ -333,17 +333,17 @@
 
             // Get sites
             yelp.getYelp('cafe');
-        }
+        };
     </script>
 
 
-</head>
+ </head>
 
 
 
-<!-- Code below only gets called when initialize() has completed. -->
-<body onload="initialize()">
-<div class="container">
+ <!-- Code below only gets called when initialize() has completed. -->
+ <body onload="initialize()">
+  <div class="container">
     <div class="row">
         <div class="col-md-4">
                 <h1>Cafe's in Santa Monica, CA</h1>
@@ -368,7 +368,7 @@
 
         </div>
     </div>
-</div>
+  </div>
 
 
 
@@ -396,11 +396,11 @@
                     })();
     </script>
 
-</body>
+ </body>
 
-<!-- Setup knockout model -->
-<script type="text/javascript">
+ <!-- Setup knockout model -->
+ <script type="text/javascript">
     var myViewModel = new viewModel();
-    ko.applyBindings(myViewModel)
-</script>
+    ko.applyBindings(myViewModel);
+ </script>
 </html>
